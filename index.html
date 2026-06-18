@@ -137,7 +137,45 @@
                 alert('Error!', error.message);
             });
     });
+    // Function to load data from Google Sheet into the HTML table
+function loadTableData() {
+    fetch(scriptURL)
+        .then(response => response.json())
+        .then(data => {
+            const table = document.getElementById('responsesTable');
+            
+            // Clear out any old data rows except the header
+            while(table.rows.length > 1) {
+                table.deleteRow(1);
+            }
+            
+            // Loop through the spreadsheet rows and inject them into the table
+            data.forEach(row => {
+                let newRow = table.insertRow();
+                newRow.innerHTML = `
+                    <td><font color="#000000">${row.visitor_name || ''}</font></td>
+                    <td><font color="#000000">${row.visitor_email || ''}</font></td>
+                    <td><b><font color="#2E8B57">${row.shares_hobby || ''}</font></b></td>
+                    <td><font color="#000000">${row.visitor_comments || ''}</font></td>
+                `;
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
+}
+
+// Automatically trigger data load on page entry
+window.onload = loadTableData;
 </script>
+    <br><br>
+<h2><font color="#006400">Submitted Feedback Log</font></h2>
+<table border="2" cellpadding="10" cellspacing="0" width="80%" bordercolor="#006400" bgcolor="#FFFFFF" id="responsesTable">
+    <tr bgcolor="#006400">
+        <th><font color="#FFFFFF" face="Arial">Name</font></th>
+        <th><font color="#FFFFFF" face="Arial">Email</font></th>
+        <th><font color="#FFFFFF" face="Arial">Shares Hobby?</font></th>
+        <th><font color="#FFFFFF" face="Arial">Comments</font></th>
+    </tr>
+    </table>
     
 </body>
 </html>
