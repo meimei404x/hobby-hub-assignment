@@ -81,7 +81,7 @@
     <hr color="#006400">
 
     <h2><font color="#006400">Visitor Interaction Form</font></h2>
-    <form action="#" method="POST">
+   <form id="hobbyForm">
         <table border="0" cellpadding="5">
             <tr>
                 <td><label for="name"><b><font color="#006400" face="Arial">Your Name:</font></b></label></td>
@@ -120,6 +120,24 @@
     <center>
         <p><small><font color="#2E8B57" face="Arial">&copy; 2026 Ambika V. All Rights Reserved. Allotted Theme Assignment.</font></small></p>
     </center>
+    
+<script>
+    const scriptURL = https://script.google.com/macros/s/AKfycbyeItaxIgz9UV_AX26UGOCZidB_k7cSnzVDM6-P7eGNcsNR7ucrXExeqtIqzBWNPpDJ/exec;
+    const form = document.getElementById('hobbyForm');
 
+    form.addEventListener('submit', e => {
+        e.preventDefault(); // Prevents page reload or 404 errors
+        
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                alert('Success! Your response has been securely saved to Google Sheets.');
+                form.reset(); // Clears form for next submission
+            })
+            .catch(error => {
+                alert('Error!', error.message);
+            });
+    });
+</script>
+    
 </body>
 </html>
