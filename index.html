@@ -2,98 +2,266 @@
 <html>
 <head>
     <title>Ambika V - My Favorite Hobby Hub</title>
+    <style>
+        /* Classy & Sophisticated Purple Palette Layer */
+        body {
+            background: linear-gradient(135deg, #1a0b2e 0%, #0d0418 100%);
+            background-attachment: fixed;
+            color: #F5F5F5; 
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+            line-height: 1.7;
+        }
+
+        /* Typography Hierarchies */
+        h1.main-title {
+            font-size: 18px;
+            color: #D6BCFA; 
+            text-align: center;
+            margin-bottom: 8px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h3.sub-title {
+            font-size: 14px;
+            color: #E2E8F0; 
+            text-align: center;
+            margin-top: 0;
+            font-weight: 300;
+            letter-spacing: 1px;
+            font-style: italic;
+        }
+
+        p, ul, li, label, input, select, textarea, td {
+            font-size: 12px;
+            color: #E2DDF0;
+        }
+
+        h2 {
+            color: #B287FD; 
+            font-size: 16px;
+            border-left: 3px solid #B287FD;
+            padding-left: 12px;
+            margin-top: 40px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #B287FD, transparent);
+            margin: 25px 0;
+        }
+
+        marquee {
+            background-color: rgba(178, 135, 253, 0.1); 
+            border-top: 1px solid rgba(178, 135, 253, 0.4);
+            border-bottom: 1px solid rgba(178, 135, 253, 0.4);
+            padding: 10px;
+        }
+        
+        marquee b {
+            color: #D6BCFA;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .image-frame {
+            border: 1px solid rgba(178, 135, 253, 0.4);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+            border-radius: 4px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: #D6BCFA;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #FFFFFF;
+            text-decoration: underline;
+        }
+
+        /* Tailored Tables (Luxury Grid Layout) */
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            background-color: rgba(255, 255, 255, 0.02); 
+            border: 1px solid rgba(178, 135, 253, 0.2);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+        }
+
+        th, td {
+            border: 1px solid rgba(178, 135, 253, 0.15);
+            padding: 14px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgba(178, 135, 253, 0.1);
+            color: #D6BCFA;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        input[type="text"], input[type="email"], select, textarea {
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(178, 135, 253, 0.3);
+            color: #FFFFFF;
+            padding: 8px;
+            border-radius: 4px;
+            transition: border 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, select:focus, textarea:focus {
+            outline: none;
+            border: 1px solid #B287FD;
+            box-shadow: 0 0 5px rgba(178, 135, 253, 0.3);
+        }
+
+        .hobby-highlight {
+            color: #D6BCFA;
+            font-weight: bold;
+        }
+
+        .btn-submit {
+            background-color: #B287FD;
+            color: #0d0418; 
+            border: none;
+            padding: 10px 22px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #D6BCFA;
+            transform: translateY(-1px);
+        }
+
+        .btn-delete {
+            background-color: transparent;
+            color: #E74C3C;
+            border: 1px solid #E74C3C;
+            padding: 4px 12px;
+            font-weight: 600;
+            border-radius: 3px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 10px;
+            letter-spacing: 0.5px;
+            transition: all 0.2s;
+        }
+
+        .btn-delete:hover {
+            background-color: #E74C3C;
+            color: #FFFFFF;
+        }
+
+        .footer-text {
+            color: #5c526d;
+            text-align: center;
+            font-size: 10px;
+            margin-top: 50px;
+            letter-spacing: 1px;
+        }
+    </style>
 </head>
-<body bgcolor="#FFD1DC">
+<body>
 
-    <center>
-        <h1>
-            <font face="Arial" size="7" color="#006400">
-                My Favorite Hobby Hub
-            </font>
-        </h1>
-        <h3>
-            <font face="Verdana" size="4" color="#2E8B57">
-                Welcome to Ambika's Creative Space
-            </font>
-        </h3>
-    </center>
+    <h1 class="main-title">My Favorite Hobby Hub</h1>
+    <h3 class="sub-title">Welcome to Ambika's Creative Space</h3>
 
-    <hr color="#006400">
+    <hr>
 
-    <marquee behavior="scroll" direction="left" scrollamount="6" bgcolor="#006400">
-        <b><font color="#FFFFFF" face="Arial" size="4">⚡ Welcome to my Hobby Hub! Explore my passion for capturing moments through the lens. Feel free to leave a message below! ⚡</font></b>
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+        <b>💎 Welcome to my Hobby Hub! Explore my passion for capturing moments through the lens. Feel free to leave a message below! 💎</b>
     </marquee>
 
-    <hr color="#006400">
+    <hr>
 
-    <h2><font color="#006400">About My Hobby: <i>Photography</i></font></h2>
+    <h2>About My Hobby: <i>Photography</i></h2>
     <p>
-        <font color="#000000" face="Arial">
-            Photography is the art, application, and practice of creating durable images. For me, it is not just about clicking pictures; it is about <b><font color="#2E8B57">capturing emotions, stories, and frozen moments in time</font></b> that can be cherished forever. 
-        </font>
+        Photography is the art, application, and practice of creating durable images. For me, it is not just about clicking pictures; it is about <span class="hobby-highlight">capturing emotions, stories, and frozen moments in time</span> that can be cherished forever. 
     </p>
 
     <p>
-        <img src="hobby.jpg" alt="Camera and Photography" width="500" height="300" border="3" style="border-color:#006400;">
+        <img src="hobby.jpg" alt="Camera and Photography" width="500" height="300" class="image-frame">
     </p>
 
     <p>
-        <font face="Arial" color="#000000">To learn more about the technical aspects of photography, you can visit the </font>
-        <a href="https://www.nationalgeographic.com/photography" target="_blank"><b><font color="#006400">National Geographic Photography Hub</font></b></a>.
+        To learn more about the technical aspects of photography, you can visit the 
+        <a href="https://www.nationalgeographic.com/photography" target="_blank">National Geographic Photography Hub</a>.
     </p>
 
-    <hr color="#006400">
+    <hr>
 
-    <h2><font color="#006400">Why I Love Photography</font></h2>
+    <h2>Why I Love Photography</h2>
     <ul>
-        <li><font face="Arial" color="#000000">It allows me to express my creativity visually.</font></li>
-        <li><font face="Arial" color="#000000">It changes the way I see the world, making me appreciate small details.</font></li>
-        <li><font face="Arial" color="#000000">It helps me connect with new people and explore breathtaking locations.</font></li>
-        <li><font face="Arial" color="#000000">It preserves beautiful memories with friends and family.</font></li>
+        <li>It allows me to express my creativity visually.</li>
+        <li>It changes the way I see the world, making me appreciate small details.</li>
+        <li>It helps me connect with new people and explore breathtaking locations.</li>
+        <li>It preserves beautiful memories with friends and family.</li>
     </ul>
 
-    <hr color="#006400">
+    <hr>
 
-    <h2><font color="#006400">Top 3 Essential Gear Items</font></h2>
-    <table border="2" cellpadding="10" cellspacing="0" width="80%" bordercolor="#006400" bgcolor="#FFFFFF">
-        <tr bgcolor="#006400">
-            <th><font color="#FFFFFF" face="Arial">Item No.</font></th>
-            <th><font color="#FFFFFF" face="Arial">Gear Name</font></th>
-            <th><font color="#FFFFFF" face="Arial">Primary Purpose</font></th>
+    <h2>Top 3 Essential Gear Items</h2>
+    <table>
+        <tr>
+            <th>Item No.</th>
+            <th>Gear Name</th>
+            <th>Primary Purpose</th>
         </tr>
         <tr>
-            <td><font color="#000000">1</font></td>
-            <td><b><font color="#2E8B57">DSLR / Mirrorless Camera</font></b></td>
-            <td><font color="#000000">The core body used to capture high-resolution images.</font></td>
+            <td>1</td>
+            <td><span class="hobby-highlight">DSLR / Mirrorless Camera</span></td>
+            <td>The core body used to capture high-resolution images.</td>
         </tr>
         <tr>
-            <td><font color="#000000">2</font></td>
-            <td><b><font color="#2E8B57">50mm Prime Lens</font></b></td>
-            <td><font color="#000000">Excellent for portraits and low-light shooting with crisp depth.</font></td>
+            <td>2</td>
+            <td><span class="hobby-highlight">50mm Prime Lens</span></td>
+            <td>Excellent for portraits and low-light shooting with crisp depth.</td>
         </tr>
         <tr>
-            <td><font color="#000000">3</font></td>
-            <td><b><font color="#2E8B57">Sturdy Tripod</font></b></td>
-            <td><font color="#000000">Provides stability for long-exposure landscape shots and night photography.</font></td>
+            <td>3</td>
+            <td><span class="hobby-highlight">Sturdy Tripod</span></td>
+            <td>Provides stability for long-exposure landscape shots and night photography.</td>
         </tr>
     </table>
 
-    <hr color="#006400">
+    <hr>
 
-    <h2><font color="#006400">Visitor Interaction Form</font></h2>
-   <form id="hobbyForm">
-        <table border="0" cellpadding="5">
-            <tr>
-                <td><label for="name"><b><font color="#006400" face="Arial">Your Name:</font></b></label></td>
-                <td><input type="text" id="name" name="visitor_name" required></td>
+    <h2>Visitor Interaction Form</h2>
+    <form id="hobbyForm">
+        <table style="border: none; width: auto; background: none; box-shadow: none;">
+            <tr style="border: none;">
+                <td style="border: none;"><label for="name"><b>Your Name:</b></label></td>
+                <td style="border: none;"><input type="text" id="name" name="visitor_name" required></td>
             </tr>
-            <tr>
-                <td><label for="email"><b><font color="#006400" face="Arial">Email Address:</font></b></label></td>
-                <td><input type="email" id="email" name="visitor_email" required></td>
+            <tr style="border: none;">
+                <td style="border: none;"><label for="email"><b>Email Address:</b></label></td>
+                <td style="border: none;"><input type="email" id="email" name="visitor_email" required></td>
             </tr>
-            <tr>
-                <td><label for="hobby-select"><b><font color="#006400" face="Arial">Do you share this hobby?</font></b></label></td>
-                <td>
+            <tr style="border: none;">
+                <td style="border: none;"><label for="hobby-select"><b>Do you share this hobby?</b></label></td>
+                <td style="border: none;">
                     <select id="hobby-select" name="shares_hobby">
                         <option value="yes">Yes, absolutely!</option>
                         <option value="no">No, I have different hobbies.</option>
@@ -101,99 +269,98 @@
                     </select>
                 </td>
             </tr>
-            <tr>
-                <td><label for="comments"><b><font color="#006400" face="Arial">Message / Feedback:</font></b></label></td>
-                <td><textarea id="comments" name="visitor_comments" rows="4" cols="30" placeholder="Type your thoughts here..."></textarea></td>
+            <tr style="border: none;">
+                <td style="border: none;"><label for="comments"><b>Message / Feedback:</b></label></td>
+                <td style="border: none;"><textarea id="comments" name="visitor_comments" rows="4" cols="30" placeholder="Type your thoughts here..."></textarea></td>
             </tr>
-            <tr>
-                <td></td>
-                <td>
+            <tr style="border: none;">
+                <td style="border: none;"></td>
+                <td style="border: none;">
                     <br>
-                    <input type="submit" value="Submit Feedback" style="background-color:#006400; color:#FFFFFF; border:none; padding:8px 15px; font-weight:bold;">
+                    <input type="submit" value="Submit Feedback" class="btn-submit">
                 </td>
             </tr>
         </table>
     </form>
 
-    <br><br>
-    <hr color="#006400">
-    <center>
-        <p><small><font color="#2E8B57" face="Arial">&copy; 2026 Ambika V. All Rights Reserved. Allotted Theme Assignment.</font></small></p>
-    </center>
+    <hr>
     
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxytmRHuiFKF0MWsplQagq62B8D6b2j7uFfrFYmzL-r_LZgtqyaPhcc7d-hwj9GhcEa/exec';
-const form = document.getElementById('hobbyForm');
-
-// 1. Handle Form Submission
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            alert('Success! Your response has been securely saved.');
-            form.reset();
-            loadTableData(); // Reload table instantly to display your new record
-        })
-        .catch(error => alert('Error submitting form: ' + error.message));
-});
-
-// 2. Fetch Data and Construct the Live Table Layout
-function loadTableData() {
-    fetch(scriptURL)
-        .then(response => response.json())
-        .then(data => {
-            const table = document.getElementById('responsesTable');
-            
-            while(table.rows.length > 1) {
-                table.deleteRow(1);
-            }
-            
-            data.forEach(row => {
-                let newRow = table.insertRow();
-                newRow.innerHTML = `
-                    <td><font color="#000000">${row.visitor_name || ''}</font></td>
-                    <td><font color="#000000">${row.visitor_email || ''}</font></td>
-                    <td><b><font color="#2E8B57">${row.shares_hobby || ''}</font></b></td>
-                    <td><font color="#000000">${row.visitor_comments || ''}</font></td>
-                    <td>
-                        <button onclick="deleteRowData(${row.rowNumber})" style="background-color:#D9534F; color:white; border:none; padding:5px 10px; font-weight:bold; cursor:pointer;">Delete</button>
-                    </td>
-                `;
-            });
-        })
-        .catch(error => console.error('Error fetching data:', error));
-}
-
-// 3. Command Google Sheets to Erase a Target Row Row
-function deleteRowData(rowNumber) {
-    if (confirm("Are you sure you want to permanently delete this row from Google Sheets?")) {
-        // Send request to Apps script matching our action configuration
-        fetch(`${scriptURL}?action=delete&rowNumber=${rowNumber}`, { method: 'POST' })
-            .then(response => response.json())
-            .then(res => {
-                if(res.result === 'deleted') {
-                    alert('Row completely deleted from Google Sheets!');
-                    loadTableData(); // Refresh the visual table data 
-                }
-            })
-            .catch(error => alert('Error deleting record: ' + error.message));
-    }
-}
-
-// Automatically populate the records log table view instantly when page opens
-window.onload = loadTableData;
-</script>
-   <br><br>
-<h2><font color="#006400">Submitted Feedback Log</font></h2>
-<table border="2" cellpadding="10" cellspacing="0" width="80%" bordercolor="#006400" bgcolor="#FFFFFF" id="responsesTable">
-    <tr bgcolor="#006400">
-        <th><font color="#FFFFFF" face="Arial">Name</font></th>
-        <th><font color="#FFFFFF" face="Arial">Email</font></th>
-        <th><font color="#FFFFFF" face="Arial">Shares Hobby?</font></th>
-        <th><font color="#FFFFFF" face="Arial">Comments</font></th>
-        <th><font color="#FFFFFF" face="Arial">Actions</font></th>
-    </tr>
+    <h2>Submitted Feedback Log</h2>
+    <table id="responsesTable">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Shares Hobby?</th>
+            <th>Comments</th>
+            <th>Actions</th> 
+        </tr>
     </table>
+
+    <hr>
+    <p class="footer-text">&copy; 2026 Ambika V. All Rights Reserved. Allotted Theme Assignment.</p>
+
+    <!-- JavaScript Data Pipeline Management Layer -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxytmRHuiFKF0MWsplQagq62B8D6b2j7uFfrFYmzL-r_LZgtqyaPhcc7d-hwj9GhcEa/exec';
+        const form = document.getElementById('hobbyForm');
+
+        // 1. Handle Form Submission Execution
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    alert('Success! Your response has been securely saved.');
+                    form.reset();
+                    loadTableData(); 
+                })
+                .catch(error => alert('Error submitting form: ' + error.message));
+        });
+
+        // 2. Fetch Spreadsheet Items and Structuralize Table View
+        function loadTableData() {
+            fetch(scriptURL)
+                .then(response => response.json())
+                .then(data => {
+                    const table = document.getElementById('responsesTable');
+                    
+                    while(table.rows.length > 1) {
+                        table.deleteRow(1);
+                    }
+                    
+                    data.forEach(row => {
+                        let newRow = table.insertRow();
+                        newRow.innerHTML = `
+                            <td>${row.visitor_name || ''}</td>
+                            <td>${row.visitor_email || ''}</td>
+                            <td><span class="hobby-highlight">${row.shares_hobby || ''}</span></td>
+                            <td>${row.visitor_comments || ''}</td>
+                            <td>
+                                <button onclick="deleteRowData(${row.rowNumber})" class="btn-delete">Delete</button>
+                            </td>
+                        `;
+                    });
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        // 3. Dispatch Deletion Interventions Back to Google Sheets Engine
+        function deleteRowData(rowNumber) {
+            if (confirm("Are you sure you want to permanently delete this row from Google Sheets?")) {
+                fetch(`${scriptURL}?action=delete&rowNumber=${rowNumber}`, { method: 'POST' })
+                    .then(response => response.json())
+                    .then(res => {
+                        if(res.result === 'deleted') {
+                            alert('Row completely deleted from Google Sheets!');
+                            loadTableData(); 
+                        }
+                    })
+                    .catch(error => alert('Error deleting record: ' + error.message));
+            }
+        }
+
+        // Initialize Table Fetch Event Immediately Upon Entry
+        window.onload = loadTableData;
+    </script>
     
 </body>
 </html>
